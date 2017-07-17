@@ -5,7 +5,7 @@
 
 #include "murmur3.h"
 
-CAMLprim value ml_hash64(value data)
+CAMLprim value caml_murmur3_hash64(value data)
 {
     CAMLparam1(data);
     uint64_t out[2];
@@ -13,7 +13,7 @@ CAMLprim value ml_hash64(value data)
     CAMLreturn(caml_copy_int64(out[0]));
 }
 
-CAMLprim value ml_hash128(value data)
+CAMLprim value caml_murmur3_hash128(value data)
 {
     CAMLparam1(data);
     uint64_t out[2];

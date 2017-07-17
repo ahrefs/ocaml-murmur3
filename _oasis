@@ -13,5 +13,5 @@ Library murmur3
   BuildTools:       ocamlbuild
   CompiledObject:   best
   Modules:          Murmur3
-  CSources:         stubs.c, murmur3.h, murmur3_impl.c
+  CSources:         murmur3_stubs.c, murmur3.h, murmur3_impl.c
   CCOpt:            -g -std=c99 -D_GNU_SOURCE -O2
