@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+(library
+ ((name murmur3)
+  (public_name murmur3)
+  (c_names (murmur3_impl murmur3_stubs))
+  (flags (-ccopt ("-g -std=c99 -D_GNU_SOURCE -O2"))))
+)

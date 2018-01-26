@@ -1,0 +1,13 @@
+opam-version: "1.2"
+name: "murmur3"
+version: "0.0.1"
+homepage: "https://github.com/ahrefs/ocaml-murmur3"
+authors: [ "Raman Varabets" ]
+license: "LGPL-2.1 with OCaml linking exception"
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "jbuilder" {build & >= "1.0+beta12"}
+]
+descr: "Bindings for murmur3 hash implementation."
