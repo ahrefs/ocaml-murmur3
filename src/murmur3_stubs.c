@@ -5,6 +5,14 @@
 
 #include "murmur3.h"
 
+CAMLprim value caml_murmur3_hash32(value data)
+{
+    CAMLparam1(data);
+    uint32_t out;
+    MurmurHash3_x86_32(String_val(data), caml_string_length(data), 0, &out);
+    CAMLreturn(caml_copy_int32(out));
+}
+
 CAMLprim value caml_murmur3_hash64(value data)
 {
     CAMLparam1(data);
