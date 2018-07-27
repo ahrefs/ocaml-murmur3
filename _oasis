@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        murmur3
-Version:     0.1
+Version:     0.2
 Synopsis:    Bindings for murmur3 hash implementation.
 Authors:     Raman Varabets
 Copyrights:  (C) 2017 Ahrefs Pte Ltd <github@ahrefs.com>
