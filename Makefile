@@ -39,3 +39,11 @@ configure:
 .PHONY: build doc test all install uninstall reinstall clean distclean configure
 
 # OASIS_STOP
+
+VERSION=$(shell oasis query version)
+NAME=ocaml-murmur3-$(VERSION)
+
+.PHONY: release
+release:
+	git tag -a -m "release $(VERSION)" v$(VERSION)
+	git archive --prefix=$(NAME)/ v$(VERSION) | gzip > $(NAME).tar.gz
