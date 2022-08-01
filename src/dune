@@ -1,0 +1,9 @@
+(library
+ (name murmur3)
+ (wrapped false)
+ (modules murmur3)
+ (foreign_stubs
+  (language c)
+  (names murmur3_impl murmur3_stubs))
+ (c_library_flags
+  (:standard -g -std=c99 -D_GNU_SOURCE -O2)))
