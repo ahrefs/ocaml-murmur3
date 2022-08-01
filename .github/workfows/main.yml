@@ -26,4 +26,3 @@ jobs:
     - run: opam depext -yt murmur3
     - run: opam install -t . --deps-only
     - run: opam exec -- dune build --display=short -p murmur3
-    - run: opam exec -- dune runtest --display=short -p murmur3

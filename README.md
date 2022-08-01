@@ -15,8 +15,3 @@ Alternatively, you can do it manually:
 
     $ opam install dune ctypes
     $ make all install
-
-Usage
------
-
-TODO
