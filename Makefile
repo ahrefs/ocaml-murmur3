@@ -1,49 +1,15 @@
-# OASIS_START
-# DO NOT EDIT (digest: a3c674b4239234cbbe53afe090018954)
-
-SETUP = ocaml setup.ml
-
-build: setup.data
-	$(SETUP) -build $(BUILDFLAGS)
-
-doc: setup.data build
-	$(SETUP) -doc $(DOCFLAGS)
-
-test: setup.data build
-	$(SETUP) -test $(TESTFLAGS)
 
 all:
-	$(SETUP) -all $(ALLFLAGS)
+	@dune build @install
 
-install: setup.data
-	$(SETUP) -install $(INSTALLFLAGS)
-
-uninstall: setup.data
-	$(SETUP) -uninstall $(UNINSTALLFLAGS)
-
-reinstall: setup.data
-	$(SETUP) -reinstall $(REINSTALLFLAGS)
+install: all
+	@dune install
 
 clean:
-	$(SETUP) -clean $(CLEANFLAGS)
+	@dune clean
 
-distclean:
-	$(SETUP) -distclean $(DISTCLEANFLAGS)
+doc:
+	@dune build @doc
 
-setup.data:
-	$(SETUP) -configure $(CONFIGUREFLAGS)
-
-configure:
-	$(SETUP) -configure $(CONFIGUREFLAGS)
-
-.PHONY: build doc test all install uninstall reinstall clean distclean configure
-
-# OASIS_STOP
-
-VERSION=$(shell oasis query version)
-NAME=ocaml-murmur3-$(VERSION)
-
-.PHONY: release
-release:
-	git tag -a -m "release $(VERSION)" v$(VERSION)
-	git archive --prefix=$(NAME)/ v$(VERSION) | gzip > $(NAME).tar.gz
+test:
+	@dune runtest

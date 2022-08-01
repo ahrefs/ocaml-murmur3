@@ -1,7 +1,1 @@
-/_build
-/setup.data
-/setup.log
-*.byte
-*.native
-
-*.sw[a-z]
+_build
