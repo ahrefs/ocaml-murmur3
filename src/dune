@@ -1,4 +1,5 @@
 (library
+ (public_name murmur3)
  (name murmur3)
  (wrapped false)
  (modules murmur3)
