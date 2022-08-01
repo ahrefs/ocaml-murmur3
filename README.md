@@ -13,5 +13,4 @@ The bindings are available via [OPAM](https://opam.ocaml.org):
 
 Alternatively, you can do it manually:
 
-    $ opam install dune ctypes
     $ make all install
