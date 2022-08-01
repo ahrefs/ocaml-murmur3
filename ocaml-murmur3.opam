@@ -1,0 +1,20 @@
+opam-version: "2.0"
+name: "ocaml-murmur3"
+version: "0.2.1"
+synopsis: "Bindings for murmur3 hash implementation"
+maintainer: "Raman Varabets"
+authors: [ "Raman Varabets" ]
+license: "LGPL-2.1 with OCaml linking exception"
+homepage: "https://github.com/ahrefs/ocaml-murmur3"
+doc: "https://github.com/ahrefs/ocaml-murmur3"
+bug-reports: "https://github.com/ahrefs/ocaml-murmur3/issues"
+dev-repo: "git://github.com/ahrefs/ocaml-murmur3.git"
+tags: [ "murmur3" "hash" ]
+build: [
+  ["dune" "build" "@install" "-j" jobs "-p" name]
+]
+depends: [
+  "ocaml" {>= "4.02"}
+  "dune" { >= "2.0" }
+  "dune-build-info" { >= "3.4.1" }
+]
