@@ -24,6 +24,6 @@ jobs:
       with:
         ocaml-compiler: ${{ matrix.ocaml-compiler }}
     - run: opam pin -n .
-    - run: opam depext -yt murmur3
+    - run: opam depext -yt ocaml-murmur3
     - run: opam install -t . --deps-only
-    - run: opam exec -- dune build --display=short -p murmur3
+    - run: opam exec -- dune build --display=short -p ocaml-murmur3

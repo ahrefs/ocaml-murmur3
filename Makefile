@@ -1,5 +1,5 @@
 VERSION=$(shell dune exec src/version.exe)
-NAME=murmur3-$(VERSION)
+NAME=ocaml-murmur3-$(VERSION)
 
 all:
 	@dune build @install
