@@ -1,6 +1,6 @@
 (library
  (public_name ocaml-murmur3)
- (name ocaml-murmur3)
+ (name murmur3)
  (wrapped false)
  (modules murmur3)
  (foreign_stubs
