@@ -9,8 +9,8 @@ Installation
 
 The bindings are available via [OPAM](https://opam.ocaml.org):
 
-    $ opam install ocaml-murmur3
+    $ opam install murmur3
 
 Alternatively, you can do it manually:
 
-    $ make all install
+    $ make install
