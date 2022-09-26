@@ -1,5 +1,5 @@
 (library
- (public_name ocaml-murmur3)
+ (public_name murmur3)
  (name murmur3)
  (wrapped false)
  (modules murmur3)
@@ -11,6 +11,5 @@
 
 (executable
  (name version)
- (public_name ocaml-murmur3)
  (modules version)
  (libraries dune-build-info))
